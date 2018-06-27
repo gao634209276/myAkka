@@ -5,8 +5,7 @@ import akka.actor.{Props, UntypedActor}
 
 class HelloWorld extends UntypedActor {
   override def preStart(): Unit = { // create the greeter actor
-    val greeter =
-      getContext.actorOf(Props.create(classOf[Greeter]), "greeter")
+    val greeter = getContext.actorOf(Props.create(classOf[Greeter]), "greeter")
     // tell it to perform the greeting
     greeter.tell(Greeter.Msg.GREET, getSelf)
   }

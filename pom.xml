@@ -11,7 +11,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<scala.version>2.11.4</scala.version>
-		<akka.version>2.2.5</akka.version>
+		<!--<akka.version>2.2.5</akka.version>-->
+		<akka.version>2.3.6</akka.version>
 	</properties>
 
 	<dependencies>
@@ -22,15 +23,40 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_2.11</artifactId>
+			<version>3.0.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
-			<version>2.10.2</version>
+			<version>2.11.4</version>
 		</dependency>
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
-			<artifactId>akka-actor_2.10</artifactId>
-			<version>2.2.5</version>
+			<artifactId>akka-actor_2.11</artifactId>
+			<version>${akka.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-remote_2.11</artifactId>
+			<version>${akka.version}</version>
+		</dependency>
+		<!-- Java 库 boilerpipe 是为了满足从网页获取文本体的需求-->
+		<dependency>
+			<groupId>com.syncthemall</groupId>
+			<artifactId>boilerpipe</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-testkit_2.11</artifactId>
+			<version>${akka.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<finalName>myAkka</finalName>

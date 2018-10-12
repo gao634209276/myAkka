@@ -1,4 +1,4 @@
-package com.meituan.demo
+package com.meituan.simple
 
 object Main {
 

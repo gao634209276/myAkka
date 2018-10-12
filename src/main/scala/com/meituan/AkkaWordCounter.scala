@@ -109,6 +109,7 @@ class Incrementor(totalNumOfFiles: Int, system: ActorSystem) extends Actor {
       fileCounter += 1
       if (totalNumOfFiles == fileCounter) {
         system.awaitTermination()
+        //system.whenTerminated
       }
 
     case _ => println("Error: message not recognized")
